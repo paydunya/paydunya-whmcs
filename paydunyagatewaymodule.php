@@ -2,7 +2,7 @@
 /**
  * Plugin Name: PayDunya Payment gateway for WHMCS
  *
- * Description: Easily integrate payment via Orange Money in your WHMCS website and start accepting payments from Senegal .
+ * Description: Easily integrate payment via Orange Money, Joni Joni, VITFE and VISA/MASTERCARD/GIM-UEMOE in your WHMCS website and start accepting payments from Senegal .
  *
  * @version 1.0
  *
@@ -19,14 +19,11 @@
  */
 
 if (!defined("WHMCS")) {
-    die("Sorry... -Vous ne pouvez pas accéder directement à ce fichier-");
+    die("Sorry my dear... -Vous ne pouvez pas accéder directement à ce fichier-");
 }
 
 /**
  * Define PayDunya gateway module related meta data.
- *
- * Values returned here are used to determine module related capabilities and
- * settings.
  *
  * @return array
  */
@@ -42,18 +39,6 @@ function paydunyagatewaymodule_MetaData()
 
 /**
  * Define PayDunya gateway configuration options.
- *
- * The fields you define here determine the configuration options that are
- * presented to administrator users when activating and configuring your
- * PayDunya gateway module for use.
- *
- * Supported field types include:
- * * text
- * * password
- * * yesno
- * * dropdown
- * * radio
- * * textarea
  *
  * @return array
  */
@@ -136,7 +121,7 @@ function paydunyagatewaymodule_link($params)
     $masterkey = $params['masterKey'];
     $sandbox = $params['sandBox'];
     
-        // Define if sandbox or live payment
+    // Define if sandbox or live payment
     if ($sandbox == "on") {
 
         $privatekey= $params['testPrivateKey'];
